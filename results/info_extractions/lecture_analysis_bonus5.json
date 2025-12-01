@@ -1,0 +1,22 @@
+{
+    "title": "Interval and Ratio Data",
+    "video_segment": "100:00 - 103:19",
+    "content_flow": [
+        {
+            "content_type": "slide_description",
+            "text": "The slide discusses Interval data, defining it as data where the difference between values is meaningful and there's no absolute absence of the variable. It poses the question 'How to analyze?' and provides an example table with 'Variable' (Temperature and Dates) and 'Values' (e.g., 15\u00b0C, 2021/10/5). The slide also shows a screenshot of a poll with a question about quantifying effort as a percentage."
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "Because when they finish their graduation, they need to fill in, student in student. And why because when they finish their graduation, they need to fill in some questionnaire. We have five. Okay. And for our student, they all answer four. We have five. Okay. And in the end, after that, our average is like four or something. Why you fill in four? They said, oh, that's another program. There's all other program. When we ask student, why you feel in four? They said, I think four is good enough. We say, but do you know when we try to convert them to percentage, the fourth means 75 points. Five means 100 points. And when they heard that, just like, really? Oh, yeah, then the four is really low. But how do you know about them? When people try to fill in the questionnaire, how do they know they are agree is like 80 points, 75 points, four, 90 points. They don't know. They have their own rubric. They have their own rule. So when you directly do, so very careful about it. A lot of student thinking about that number, they just average them. That meaning may actually misleading you. Okay, so the next one is called interval data. Interval data is your difference. So right here, we actually say the gold medal, silver medal, bronze medal or like five, four, three, two, one. The five and the four, that interval have no meaning at all because you don't know what does it mean by agree and very agree. What's the difference between them? Everyone have their own standard. But then interval data is you don't need to worry about that because they have the same standard. Okay. For example, temperature from degree 15 to degree 17, two degree difference. They are same. But how we try to analyze them? Then you can do frequency distribution, mode, median, mean, range, standard deviation, variance. You can do in something like that. But then my question right here, you will find out that we have next one called ratio data. Ratio data is not only mean the difference is meaningful. The ratio are also meaningful. So then right now we can tell you speed and days right here are different. And how we try to analyze them? We can do matrix operation. Here is the question. You know we can do ratio, right? And do you see temperature? Why we cannot do temperature? Why? Okay. So go to slide two. Tell me why you cannot do temperature."
+        },
+        {
+            "content_type": "slide_description",
+            "text": "The slide discusses Ordinal data, defining it as data where values can help to order objects. It lists examples like 'Bronze', 'Silver', 'Gold' under 'Medal' and 'Strongly disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly agree' under 'Level of agreement'. It asks 'How to analyze?' and suggests 'Distribution, Mode, Mean (Range), Mean (Range)'. It also shows a table with 'Order of Ranks' for different countries and their medal counts."
+        },
+        {
+            "content_type": "slide_description",
+            "text": "The slide introduces Ratio data. It states that both differences and ratios are meaningful and that there's no total absence of the variable. It asks 'How to analyze?' and lists 'Frequency distribution, Mode, Median, Mean, Range, Standard deviation, and Variance' as methods. An example table shows 'Variable' (Speed and Days) with 'Values' (e.g., 205 M/h, -205 M/h, 0 days, +120 days)."
+        }
+    ]
+}

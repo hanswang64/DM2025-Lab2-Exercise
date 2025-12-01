@@ -1,0 +1,203 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">important_term</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        # LECTURE ANALYSIS: Interval and Ratio Data
+## Video Segment: 100:00 - 103:19
+
+[SLIDE DESCRIPTION]
+The slide discusses Interval data, defining it as data where the difference between values is meaningful and there&#x27;s no absolute absence of the variable. It poses the question &#x27;How to analyze?&#x27; and provides an example table with &#x27;Variable&#x27; (Temperature and Dates) and &#x27;Values&#x27; (e.g., 15°C, 2021/10/5). The slide also shows a screenshot of a poll with a question about quantifying effort as a percentage.
+
+[TRANSCRIPT - 00:00:00]
+Because when they finish their graduation, they need to fill in, student in student. And why because when they finish their graduation, they need to fill in some questionnaire. We have five. Okay. And for our student, they all answer four. We have five. Okay. And in the end, after that, our average is like four or something. Why you fill in four? They said, oh, that&#x27;s another program. There&#x27;s all other program. When we ask student, why you feel in four? They said, I think four is good enough. We say, but do you know when we try to convert them to percentage, the fourth means 75 points. Five means 100 points. And when they heard that, just like, really? Oh, yeah, then the four is really low. But how do you know about them? When people try to fill in the questionnaire, how do they know they are agree is like 80 points, 75 points, four, 90 points. They don&#x27;t know. They have their own rubric. They have their own rule. So when you directly do, so very careful about it. A lot of student thinking about that number, they just average them. That meaning may actually misleading you. Okay, so the next one is called interval data. <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">Interval data is your difference. So right here, we actually say the gold medal, silver medal, bronze medal or like five, four, three, two, one. The five and the four, that interval have no meaning at all because you don&#x27;t know what does it mean by agree and very agree. What&#x27;s the difference between them?</span> Everyone have their own standard. But then <span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">interval data is you don&#x27;t need to worry about that because they have the same standard</span>. Okay. For example, temperature from degree 15 to degree 17, two degree difference. They are same. But how we try to analyze them? Then you can do frequency distribution, mode, median, mean, range, standard deviation, variance. You can do in something like that. But then my question right here, you will find out that we have next one called <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">ratio data. Ratio data is not only mean the difference is meaningful. The ratio are also meaningful.</span> So then right now we can tell you speed and days right here are different. And how we try to analyze them? We can do matrix operation. Here is the question. You know we can do ratio, right? And do you see temperature? Why we cannot do temperature? Why? Okay. So go to slide two. Tell me why you cannot do temperature.
+
+[SLIDE DESCRIPTION]
+The slide discusses <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">Ordinal data, defining it as data where values can help to order objects.</span> It lists examples like &#x27;Bronze&#x27;, &#x27;Silver&#x27;, &#x27;Gold&#x27; under &#x27;Medal&#x27; and &#x27;Strongly disagree&#x27;, &#x27;Disagree&#x27;, &#x27;Neutral&#x27;, &#x27;Agree&#x27;, &#x27;Strongly agree&#x27; under &#x27;Level of agreement&#x27;. It asks &#x27;How to analyze?&#x27; and suggests &#x27;Distribution, Mode, Mean (Range), Mean (Range)&#x27;. It also shows a table with &#x27;Order of Ranks&#x27; for different countries and their medal counts.
+
+[SLIDE DESCRIPTION]
+The slide introduces <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">Ratio data. It states that both differences and ratios are meaningful and that there&#x27;s no total absence of the variable.</span> It asks &#x27;How to analyze?&#x27; and lists &#x27;Frequency distribution, Mode, Median, Mean, Range, Standard deviation, and Variance&#x27; as methods. An example table shows &#x27;Variable&#x27; (Speed and Days) with &#x27;Values&#x27; (e.g., 205 M/h, -205 M/h, 0 days, +120 days).
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="4" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/5</span> |
+          Pos <span id="posInfo">[1665-1971]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "important_term", "text": "Interval data is your difference. So right here, we actually say the gold medal, silver medal, bronze medal or like five, four, three, two, one. The five and the four, that interval have no meaning at all because you don't know what does it mean by agree and very agree. What's the difference between them?", "color": "#D2E3FC", "startPos": 1665, "endPos": 1971, "beforeText": " student thinking about that number, they just average them. That meaning may actually misleading you. Okay, so the next one is called interval data. ", "extractionText": "Interval data is your difference. So right here, we actually say the gold medal, silver medal, bronze medal or like five, four, three, two, one. The five and the four, that interval have no meaning at all because you don&#x27;t know what does it mean by agree and very agree. What&#x27;s the difference between them?", "afterText": " Everyone have their own standard. But then interval data is you don&#x27;t need to worry about that because they have the same standard. Okay. For example", "attributesHtml": "<div><strong>class:</strong> important_term</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">term</span>: <span class=\"lx-attr-value\">Interval Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data where the difference between values is meaningful, but there is no absolute absence of the variable. The example given is a rating scale (e.g., 1-5) where the difference between &#x27;agree&#x27; and &#x27;very agree&#x27; might not be quantifiable or meaningful in a strict mathematical sense.</span>, <span class=\"lx-attr-key\">relevance</span>: <span class=\"lx-attr-value\">Understanding the limitations of interval data is crucial for accurate data analysis and interpretation, as simply averaging such data can be misleading.</span>, <span class=\"lx-attr-key\">difficulty</span>: <span class=\"lx-attr-value\">Intermediate</span>}</div>"}, {"index": 1, "class": "important_term", "text": "interval data is you don't need to worry about that because they have the same standard. For example, temperature from degree 15 to degree 17, two degree difference. They are same.", "color": "#D2E3FC", "startPos": 2015, "endPos": 2102, "beforeText": " all because you don&#x27;t know what does it mean by agree and very agree. What&#x27;s the difference between them? Everyone have their own standard. But then ", "extractionText": "interval data is you don&#x27;t need to worry about that because they have the same standard", "afterText": ". Okay. For example, temperature from degree 15 to degree 17, two degree difference. They are same. But how we try to analyze them? Then you can do fr", "attributesHtml": "<div><strong>class:</strong> important_term</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">term</span>: <span class=\"lx-attr-value\">Interval Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data where differences are meaningful and have the same standard, but ratios are not necessarily meaningful.</span>, <span class=\"lx-attr-key\">relevance</span>: <span class=\"lx-attr-value\">Allows for calculations like mean, median, mode, standard deviation.</span>, <span class=\"lx-attr-key\">difficulty</span>: <span class=\"lx-attr-value\">Intermediate</span>}</div>"}, {"index": 2, "class": "important_term", "text": "ratio data. Ratio data is not only mean the difference is meaningful. The ratio are also meaningful.", "color": "#D2E3FC", "startPos": 2446, "endPos": 2546, "beforeText": "nge, standard deviation, variance. You can do in something like that. But then my question right here, you will find out that we have next one called ", "extractionText": "ratio data. Ratio data is not only mean the difference is meaningful. The ratio are also meaningful.", "afterText": " So then right now we can tell you speed and days right here are different. And how we try to analyze them? We can do matrix operation. Here is the qu", "attributesHtml": "<div><strong>class:</strong> important_term</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">term</span>: <span class=\"lx-attr-value\">Ratio Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data where both differences and ratios are meaningful, and there is a true zero point.</span>, <span class=\"lx-attr-key\">relevance</span>: <span class=\"lx-attr-value\">Allows for all arithmetic operations and comparisons of magnitude.</span>, <span class=\"lx-attr-key\">difficulty</span>: <span class=\"lx-attr-value\">Intermediate</span>}</div>"}, {"index": 3, "class": "important_term", "text": "Ordinal data, defining it as data where values can help to order objects.", "color": "#D2E3FC", "startPos": 2906, "endPos": 2979, "beforeText": "erature? Why we cannot do temperature? Why? Okay. So go to slide two. Tell me why you cannot do temperature.\n\n[SLIDE DESCRIPTION]\nThe slide discusses ", "extractionText": "Ordinal data, defining it as data where values can help to order objects.", "afterText": " It lists examples like &#x27;Bronze&#x27;, &#x27;Silver&#x27;, &#x27;Gold&#x27; under &#x27;Medal&#x27; and &#x27;Strongly disagree&#x27;, &#x27;Disagree&#x27;, &#x27;Neutral&#x27;, &#x27;Agree&#x27;, &#x27;Strongly agree&#x27; under &#x27;Leve", "attributesHtml": "<div><strong>class:</strong> important_term</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">term</span>: <span class=\"lx-attr-value\">Ordinal Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data where values can be ordered, but the differences between values are not necessarily equal or meaningful.</span>, <span class=\"lx-attr-key\">relevance</span>: <span class=\"lx-attr-value\">Useful for ranking and ordering categories.</span>, <span class=\"lx-attr-key\">difficulty</span>: <span class=\"lx-attr-value\">Intermediate</span>}</div>"}, {"index": 4, "class": "important_term", "text": "Ratio data. It states that both differences and ratios are meaningful and that there's no total absence of the variable.", "color": "#D2E3FC", "startPos": 3369, "endPos": 3489, "beforeText": " Mean (Range)&#x27;. It also shows a table with &#x27;Order of Ranks&#x27; for different countries and their medal counts.\n\n[SLIDE DESCRIPTION]\nThe slide introduces ", "extractionText": "Ratio data. It states that both differences and ratios are meaningful and that there&#x27;s no total absence of the variable.", "afterText": " It asks &#x27;How to analyze?&#x27; and lists &#x27;Frequency distribution, Mode, Median, Mean, Range, Standard deviation, and Variance&#x27; as methods. An example tabl", "attributesHtml": "<div><strong>class:</strong> important_term</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">term</span>: <span class=\"lx-attr-value\">Ratio Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data where differences and ratios are meaningful, and a true zero exists.</span>, <span class=\"lx-attr-key\">relevance</span>: <span class=\"lx-attr-value\">Enables all forms of mathematical analysis.</span>, <span class=\"lx-attr-key\">difficulty</span>: <span class=\"lx-attr-value\">Intermediate</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
