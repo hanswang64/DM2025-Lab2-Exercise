@@ -1,0 +1,273 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">Musicals made me a romantic</span>. <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">They taught me that some emotion is so powerful 
+that it can’t be put into mere words—it must be sung</span>. <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">Some love is so 
+overwhelming that you just have to move your feet</span>. With a family that loved 
+classic films, I remember being awed by Gene Kelly and Fred Astaire, <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">thinking 
+they were as cool as anyone in movie history</span>. <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">Characters in musicals not only 
+understood love differently than those in traditional films but they turned that 
+understanding into art—dancing, singing and transcending mere dialogue to 
+become something greater, something purer, something closer to true romance</span>. 
+We’ve had some musicals since the era of Rogers &amp; Astaire, but <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">few that have 
+tried to recapture that sense of fluid, magical thinking in which characters 
+communicate with their bodies as much, maybe even more, than they do with 
+their voices</span>. <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">One of many remarkable things about Damien Chazelle’s “La La 
+Land” is how much energy and time it devotes to movement and music, not just 
+lyrics</span>. The modern movie musicals, so often based on Broadway shows, have 
+focused heavily on songs that further plot. <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">In Chazelle’s vision, choreography 
+matters and a simple piano refrain can have more power than a lyric</span>. <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">This is a 
+beautiful film about love and dreams, and how the two impact each other</span>. <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">Los 
+Angeles is filled with dreamers, and sometimes it takes a partner to make your 
+dream come true</span>. 
+<span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">“La La Land” opens with a bit of a fake-out in that it’s a large ensemble number 
+of a variety that we won’t really see again in the movie</span>. Cars are stuck in the 
+notoriously awful L.A. traffic when the drivers decide to break into song called 
+“Another Day of Sun”—<span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">a bit about how each day brings new hope for these 
+young wannabe artists</span>—jumping out of the cars and dancing on the freeway. 
+<span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">Instantly, Chazelle’s direction and the dance choreography feels different</span>. <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">Here, 
+and throughout the film, he works in long, unbroken takes</span>. You can not only see 
+the dance moves, but you can see the dancer’s entire body when he or she 
+performs them. And after the chorus-like introduction to a city of dreamers, we 
+meet two such sun-gazers: pianist Sebastian (Ryan Gosling) and actress Mia 
+(Emma Stone). Like any good musical, the two have a few false starts and 
+playfully mock each other’s flaws in their first scenes. But we know where this is 
+headed and Gosling &amp; Stone <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">have the chemistry to make us long for them to get</span>
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+together. 
+The first major centerpiece scene is a long walk between Sebastian and Mia as 
+the sun is setting over the Hollywood Hills. They start to see similarities in one 
+another. Mia is tired of going on worthless auditions, ones in which the producer 
+doesn’t even look up from their phone. Sebastian holds on to an ideal version of 
+jazz, wanting to open his own club instead of selling out and playing greatest hits 
+for tourists. And Sebastian and Mia have a clear, instant attraction. So, even as 
+they sing about how they’re not really a couple, and how this gorgeous night is 
+wasted because they’re not with their true partners, their bodies tell another 
+story with a <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">fantastically choreographed dance number</span>. Stone and Gosling aren’t 
+natural singers or dancers, but they <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">bring so much character and commitment to 
+every movement that it doesn’t matter</span>. <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">They’re fluid, engaged and mesmerizing</span>. 
+We watch them fall in love through dance. 
+Of course, it helps that Gosling and Stone have the <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">kind of star power that made 
+so many of those classic era musicals memorable</span>. <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">He’s smooth and 
+charismatic; she’s clever and beautiful</span>. The phrase has lost most of its meaning, 
+but these are movie stars. And, of course, they’re <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">more than capable when “La 
+La Land” demands greater depth</span>, <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">finding characters so rich that the movie would 
+work without the music</span>. It’s a <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">story of artistic passion</span>, and how easy it is to get 
+derailed from your dream. Sometimes it takes another person to push you back 
+on to the tracks to find it again. Gosling and Stone get these characters, <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">finding 
+grace in their movement but emotional depth in their arcs</span>; <span class="lx-highlight" data-idx="24" style="background-color:#C8E6C9;">Stone has never been 
+better</span>. 
+“La La Land” also exists as a very conscious ode to the allure of classic 
+Hollywood. The pair goes to see “Rebel Without a Cause” (ending in <span class="lx-highlight" data-idx="25" style="background-color:#C8E6C9;">one of the 
+most magical scenes in years</span>) and films like “Casablanca” and “Bringing Up 
+Baby” are name-dropped. We have seen dozens of films that try to capture the 
+allure of Hollywood, often with the cynical viewpoint that it will chew you up and 
+spit you out, but <span class="lx-highlight" data-idx="26" style="background-color:#C8E6C9;">Chazelle’s vision feels unique</span>. It <span class="lx-highlight" data-idx="27" style="background-color:#C8E6C9;">pays homage to musicals</span> like 
+“Singin’ in the Rain” and Jacques Demy’s “The Umbrellas of Cherbourg” <span class="lx-highlight" data-idx="28" style="background-color:#C8E6C9;">without 
+every directly mimicking them</span>.   
+<span class="lx-highlight" data-idx="29" style="background-color:#D2E3FC;">It’s easy to let the world get you down sometimes</span>, especially in a year like this
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+one. <span class="lx-highlight" data-idx="30" style="background-color:#D2E3FC;">It’s easy to think that dreams don’t come true</span>, and that love only exists in 
+movies. <span class="lx-highlight" data-idx="31" style="background-color:#D2E3FC;">“La La Land” serves to remind us that movies can still be magical</span>, and 
+<span class="lx-highlight" data-idx="32" style="background-color:#D2E3FC;">they can still provide the channel for us to see magic in the world around us</span>. It’s 
+not so much another day in the sun, as the characters sing in that opening 
+number, but <span class="lx-highlight" data-idx="33" style="background-color:#D2E3FC;">the dreams of the night before, the ones we wake up and try to fulfill, 
+that keep us dancing</span>. 
+This review was originally published on September 14, 2016 as a part of our TIFF 
+coverage.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="33" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/34</span> |
+          Pos <span id="posInfo">[15-42]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "Musicals made me a romantic", "color": "#C8E6C9", "startPos": 15, "endPos": 42, "beforeText": "**Page 1**\n&quot;&quot;&quot;\n", "extractionText": "Musicals made me a romantic", "afterText": ". They taught me that some emotion is so powerful \nthat it can\u2019t be put into mere words\u2014it must be sung. Some love is so \noverwhelming that you just h", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Musicals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">made me a romantic</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "they taught me that some emotion is so powerful that it can\u2019t be put into mere words\u2014it must be sung", "color": "#C8E6C9", "startPos": 44, "endPos": 145, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nMusicals made me a romantic. ", "extractionText": "They taught me that some emotion is so powerful \nthat it can\u2019t be put into mere words\u2014it must be sung", "afterText": ". Some love is so \noverwhelming that you just have to move your feet. With a family that loved \nclassic films, I remember being awed by Gene Kelly and", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Musicals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">taught me that some emotion is so powerful that it can\u2019t be put into mere words\u2014it must be sung</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "Some love is so overwhelming that you just have to move your feet", "color": "#C8E6C9", "startPos": 147, "endPos": 213, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nMusicals made me a romantic. They taught me that some emotion is so powerful \nthat it can\u2019t be put into mere words\u2014it must be sung. ", "extractionText": "Some love is so \noverwhelming that you just have to move your feet", "afterText": ". With a family that loved \nclassic films, I remember being awed by Gene Kelly and Fred Astaire, thinking \nthey were as cool as anyone in movie histor", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Love in musicals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">so overwhelming that you just have to move your feet</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "thinking they were as cool as anyone in movie history", "color": "#C8E6C9", "startPos": 310, "endPos": 364, "beforeText": "so \noverwhelming that you just have to move your feet. With a family that loved \nclassic films, I remember being awed by Gene Kelly and Fred Astaire, ", "extractionText": "thinking \nthey were as cool as anyone in movie history", "afterText": ". Characters in musicals not only \nunderstood love differently than those in traditional films but they turned that \nunderstanding into art\u2014dancing, s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gene Kelly and Fred Astaire</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">as cool as anyone in movie history</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "Characters in musicals not only understood love differently than those in traditional films but they turned that understanding into art\u2014dancing, singing and transcending mere dialogue to become something greater, something purer, something closer to true romance", "color": "#C8E6C9", "startPos": 366, "endPos": 631, "beforeText": "ith a family that loved \nclassic films, I remember being awed by Gene Kelly and Fred Astaire, thinking \nthey were as cool as anyone in movie history. ", "extractionText": "Characters in musicals not only \nunderstood love differently than those in traditional films but they turned that \nunderstanding into art\u2014dancing, singing and transcending mere dialogue to \nbecome something greater, something purer, something closer to true romance", "afterText": ". \nWe\u2019ve had some musicals since the era of Rogers &amp; Astaire, but few that have \ntried to recapture that sense of fluid, magical thinking in which cha", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Characters in musicals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">turned that understanding into art\u2014dancing, singing and transcending mere dialogue to become something greater, something purer, something closer to true romance</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "few that have tried to recapture that sense of fluid, magical thinking in which characters communicate with their bodies as much, maybe even more, than they do with their voices", "color": "#C8E6C9", "startPos": 697, "endPos": 877, "beforeText": "ogue to \nbecome something greater, something purer, something closer to true romance. \nWe\u2019ve had some musicals since the era of Rogers &amp; Astaire, but ", "extractionText": "few that have \ntried to recapture that sense of fluid, magical thinking in which characters \ncommunicate with their bodies as much, maybe even more, than they do with \ntheir voices", "afterText": ". One of many remarkable things about Damien Chazelle\u2019s \u201cLa La \nLand\u201d is how much energy and time it devotes to movement and music, not just \nlyrics. ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Modern musicals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">few that have tried to recapture that sense of fluid, magical thinking</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "One of many remarkable things about Damien Chazelle\u2019s \u201cLa La Land\u201d is how much energy and time it devotes to movement and music, not just lyrics", "color": "#C8E6C9", "startPos": 879, "endPos": 1025, "beforeText": "e that sense of fluid, magical thinking in which characters \ncommunicate with their bodies as much, maybe even more, than they do with \ntheir voices. ", "extractionText": "One of many remarkable things about Damien Chazelle\u2019s \u201cLa La \nLand\u201d is how much energy and time it devotes to movement and music, not just \nlyrics", "afterText": ". The modern movie musicals, so often based on Broadway shows, have \nfocused heavily on songs that further plot. In Chazelle\u2019s vision, choreography \nm", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">remarkable things about... how much energy and time it devotes to movement and music, not just lyrics</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "In Chazelle\u2019s vision, choreography matters and a simple piano refrain can have more power than a lyric", "color": "#C8E6C9", "startPos": 1138, "endPos": 1241, "beforeText": " movement and music, not just \nlyrics. The modern movie musicals, so often based on Broadway shows, have \nfocused heavily on songs that further plot. ", "extractionText": "In Chazelle\u2019s vision, choreography \nmatters and a simple piano refrain can have more power than a lyric", "afterText": ". This is a \nbeautiful film about love and dreams, and how the two impact each other. Los \nAngeles is filled with dreamers, and sometimes it takes a p", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Choreography and music in La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">choreography matters and a simple piano refrain can have more power than a lyric</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "This is a beautiful film about love and dreams, and how the two impact each other", "color": "#C8E6C9", "startPos": 1243, "endPos": 1325, "beforeText": "\nfocused heavily on songs that further plot. In Chazelle\u2019s vision, choreography \nmatters and a simple piano refrain can have more power than a lyric. ", "extractionText": "This is a \nbeautiful film about love and dreams, and how the two impact each other", "afterText": ". Los \nAngeles is filled with dreamers, and sometimes it takes a partner to make your \ndream come true. \n\u201cLa La Land\u201d opens with a bit of a fake-out i", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">beautiful film about love and dreams</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "Los Angeles is filled with dreamers, and sometimes it takes a partner to make your dream come true", "color": "#C8E6C9", "startPos": 1327, "endPos": 1427, "beforeText": "ters and a simple piano refrain can have more power than a lyric. This is a \nbeautiful film about love and dreams, and how the two impact each other. ", "extractionText": "Los \nAngeles is filled with dreamers, and sometimes it takes a partner to make your \ndream come true", "afterText": ". \n\u201cLa La Land\u201d opens with a bit of a fake-out in that it\u2019s a large ensemble number \nof a variety that we won\u2019t really see again in the movie. Cars ar", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Los Angeles</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">filled with dreamers, and sometimes it takes a partner to make your dream come true</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "\u201cLa La Land\u201d opens with a bit of a fake-out in that it\u2019s a large ensemble number of a variety that we won\u2019t really see again in the movie", "color": "#C8E6C9", "startPos": 1430, "endPos": 1568, "beforeText": "and dreams, and how the two impact each other. Los \nAngeles is filled with dreamers, and sometimes it takes a partner to make your \ndream come true. \n", "extractionText": "\u201cLa La Land\u201d opens with a bit of a fake-out in that it\u2019s a large ensemble number \nof a variety that we won\u2019t really see again in the movie", "afterText": ". Cars are stuck in the \nnotoriously awful L.A. traffic when the drivers decide to break into song called \n\u201cAnother Day of Sun\u201d\u2014a bit about how each d", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land opening scene</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">a bit of a fake-out</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "a bit about how each day brings new hope for these young wannabe artists", "color": "#C8E6C9", "startPos": 1696, "endPos": 1769, "beforeText": "see again in the movie. Cars are stuck in the \nnotoriously awful L.A. traffic when the drivers decide to break into song called \n\u201cAnother Day of Sun\u201d\u2014", "extractionText": "a bit about how each day brings new hope for these \nyoung wannabe artists", "afterText": "\u2014jumping out of the cars and dancing on the freeway. \nInstantly, Chazelle\u2019s direction and the dance choreography feels different. Here, \nand throughou", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">\u201cAnother Day of Sun\u201d song</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">how each day brings new hope</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "Instantly, Chazelle\u2019s direction and the dance choreography feels different", "color": "#C8E6C9", "startPos": 1823, "endPos": 1897, "beforeText": " \n\u201cAnother Day of Sun\u201d\u2014a bit about how each day brings new hope for these \nyoung wannabe artists\u2014jumping out of the cars and dancing on the freeway. \n", "extractionText": "Instantly, Chazelle\u2019s direction and the dance choreography feels different", "afterText": ". Here, \nand throughout the film, he works in long, unbroken takes. You can not only see \nthe dance moves, but you can see the dancer\u2019s entire body wh", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Chazelle\u2019s direction and the dance choreography</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">feels different</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "Here, and throughout the film, he works in long, unbroken takes", "color": "#C8E6C9", "startPos": 1899, "endPos": 1963, "beforeText": "oung wannabe artists\u2014jumping out of the cars and dancing on the freeway. \nInstantly, Chazelle\u2019s direction and the dance choreography feels different. ", "extractionText": "Here, \nand throughout the film, he works in long, unbroken takes", "afterText": ". You can not only see \nthe dance moves, but you can see the dancer\u2019s entire body when he or she \nperforms them. And after the chorus-like introductio", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Chazelle&#x27;s direction</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">works in long, unbroken takes</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "have the chemistry to make us long for them to get together", "color": "#C8E6C9", "startPos": 2403, "endPos": 2453, "beforeText": ", the two have a few false starts and \nplayfully mock each other\u2019s flaws in their first scenes. But we know where this is \nheaded and Gosling &amp; Stone ", "extractionText": "have the chemistry to make us long for them to get", "afterText": "\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\ntogether. \nThe first major centerpiece scene is a long walk between Sebastian and Mia as \nthe sun is setting over the Hollywood H", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gosling &amp; Stone</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">chemistry</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "fantastically choreographed dance number", "color": "#C8E6C9", "startPos": 3155, "endPos": 3195, "beforeText": "\u2019re not really a couple, and how this gorgeous night is \nwasted because they\u2019re not with their true partners, their bodies tell another \nstory with a ", "extractionText": "fantastically choreographed dance number", "afterText": ". Stone and Gosling aren\u2019t \nnatural singers or dancers, but they bring so much character and commitment to \nevery movement that it doesn\u2019t matter. The", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">dance number</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fantastically choreographed</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "bring so much character and commitment to every movement that it doesn\u2019t matter", "color": "#C8E6C9", "startPos": 3260, "endPos": 3340, "beforeText": "ers, their bodies tell another \nstory with a fantastically choreographed dance number. Stone and Gosling aren\u2019t \nnatural singers or dancers, but they ", "extractionText": "bring so much character and commitment to \nevery movement that it doesn\u2019t matter", "afterText": ". They\u2019re fluid, engaged and mesmerizing. \nWe watch them fall in love through dance. \nOf course, it helps that Gosling and Stone have the kind of star", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Stone and Gosling</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">so much character and commitment</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "They\u2019re fluid, engaged and mesmerizing", "color": "#C8E6C9", "startPos": 3342, "endPos": 3380, "beforeText": "ber. Stone and Gosling aren\u2019t \nnatural singers or dancers, but they bring so much character and commitment to \nevery movement that it doesn\u2019t matter. ", "extractionText": "They\u2019re fluid, engaged and mesmerizing", "afterText": ". \nWe watch them fall in love through dance. \nOf course, it helps that Gosling and Stone have the kind of star power that made \nso many of those class", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Stone and Gosling</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fluid, engaged and mesmerizing</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "kind of star power that made so many of those classic era musicals memorable", "color": "#C8E6C9", "startPos": 3478, "endPos": 3555, "beforeText": "esn\u2019t matter. They\u2019re fluid, engaged and mesmerizing. \nWe watch them fall in love through dance. \nOf course, it helps that Gosling and Stone have the ", "extractionText": "kind of star power that made \nso many of those classic era musicals memorable", "afterText": ". He\u2019s smooth and \ncharismatic; she\u2019s clever and beautiful. The phrase has lost most of its meaning, \nbut these are movie stars. And, of course, they\u2019", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gosling and Stone</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">star power</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "He\u2019s smooth and charismatic; she\u2019s clever and beautiful", "color": "#C8E6C9", "startPos": 3557, "endPos": 3613, "beforeText": "ve through dance. \nOf course, it helps that Gosling and Stone have the kind of star power that made \nso many of those classic era musicals memorable. ", "extractionText": "He\u2019s smooth and \ncharismatic; she\u2019s clever and beautiful", "afterText": ". The phrase has lost most of its meaning, \nbut these are movie stars. And, of course, they\u2019re more than capable when \u201cLa \nLa Land\u201d demands greater de", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gosling and Stone</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">smooth and charismatic; clever and beautiful</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "more than capable when \u201cLa La Land\u201d demands greater depth", "color": "#C8E6C9", "startPos": 3708, "endPos": 3766, "beforeText": "e\u2019s smooth and \ncharismatic; she\u2019s clever and beautiful. The phrase has lost most of its meaning, \nbut these are movie stars. And, of course, they\u2019re ", "extractionText": "more than capable when \u201cLa \nLa Land\u201d demands greater depth", "afterText": ", finding characters so rich that the movie would \nwork without the music. It\u2019s a story of artistic passion, and how easy it is to get \nderailed from ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gosling and Stone</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">more than capable</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "finding characters so rich that the movie would work without the music", "color": "#C8E6C9", "startPos": 3768, "endPos": 3839, "beforeText": " phrase has lost most of its meaning, \nbut these are movie stars. And, of course, they\u2019re more than capable when \u201cLa \nLa Land\u201d demands greater depth, ", "extractionText": "finding characters so rich that the movie would \nwork without the music", "afterText": ". It\u2019s a story of artistic passion, and how easy it is to get \nderailed from your dream. Sometimes it takes another person to push you back \non to the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">characters</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">so rich</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "story of artistic passion", "color": "#C8E6C9", "startPos": 3848, "endPos": 3873, "beforeText": ", they\u2019re more than capable when \u201cLa \nLa Land\u201d demands greater depth, finding characters so rich that the movie would \nwork without the music. It\u2019s a ", "extractionText": "story of artistic passion", "afterText": ", and how easy it is to get \nderailed from your dream. Sometimes it takes another person to push you back \non to the tracks to find it again. Gosling ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">artistic passion</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "finding grace in their movement but emotional depth in their arcs", "color": "#C8E6C9", "startPos": 4055, "endPos": 4121, "beforeText": "ailed from your dream. Sometimes it takes another person to push you back \non to the tracks to find it again. Gosling and Stone get these characters, ", "extractionText": "finding \ngrace in their movement but emotional depth in their arcs", "afterText": "; Stone has never been \nbetter. \n\u201cLa La Land\u201d also exists as a very conscious ode to the allure of classic \nHollywood. The pair goes to see \u201cRebel Wit", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gosling and Stone&#x27;s characters</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">grace and emotional depth</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "Stone has never been better", "color": "#C8E6C9", "startPos": 4123, "endPos": 4151, "beforeText": " back \non to the tracks to find it again. Gosling and Stone get these characters, finding \ngrace in their movement but emotional depth in their arcs; ", "extractionText": "Stone has never been \nbetter", "afterText": ". \n\u201cLa La Land\u201d also exists as a very conscious ode to the allure of classic \nHollywood. The pair goes to see \u201cRebel Without a Cause\u201d (ending in one o", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Stone&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">never been better</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "one of the most magical scenes in years", "color": "#C8E6C9", "startPos": 4296, "endPos": 4336, "beforeText": "etter. \n\u201cLa La Land\u201d also exists as a very conscious ode to the allure of classic \nHollywood. The pair goes to see \u201cRebel Without a Cause\u201d (ending in ", "extractionText": "one of the \nmost magical scenes in years", "afterText": ") and films like \u201cCasablanca\u201d and \u201cBringing Up \nBaby\u201d are name-dropped. We have seen dozens of films that try to capture the \nallure of Hollywood, oft", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The scene where they see &#x27;Rebel Without a Cause&#x27;</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">most magical scenes</span>}</div>"}, {"index": 26, "class": "opinion_statement", "text": "Chazelle\u2019s vision feels unique", "color": "#C8E6C9", "startPos": 4564, "endPos": 4594, "beforeText": "e seen dozens of films that try to capture the \nallure of Hollywood, often with the cynical viewpoint that it will chew you up and \nspit you out, but ", "extractionText": "Chazelle\u2019s vision feels unique", "afterText": ". It pays homage to musicals like \n\u201cSingin\u2019 in the Rain\u201d and Jacques Demy\u2019s \u201cThe Umbrellas of Cherbourg\u201d without \nevery directly mimicking them.   \nIt", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Chazelle&#x27;s vision</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">feels unique</span>}</div>"}, {"index": 27, "class": "opinion_statement", "text": "pays homage to musicals", "color": "#C8E6C9", "startPos": 4599, "endPos": 4622, "beforeText": "capture the \nallure of Hollywood, often with the cynical viewpoint that it will chew you up and \nspit you out, but Chazelle\u2019s vision feels unique. It ", "extractionText": "pays homage to musicals", "afterText": " like \n\u201cSingin\u2019 in the Rain\u201d and Jacques Demy\u2019s \u201cThe Umbrellas of Cherbourg\u201d without \nevery directly mimicking them.   \nIt\u2019s easy to let the world get", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">pays homage</span>}</div>"}, {"index": 28, "class": "opinion_statement", "text": "without every directly mimicking them", "color": "#C8E6C9", "startPos": 4699, "endPos": 4737, "beforeText": "t you out, but Chazelle\u2019s vision feels unique. It pays homage to musicals like \n\u201cSingin\u2019 in the Rain\u201d and Jacques Demy\u2019s \u201cThe Umbrellas of Cherbourg\u201d ", "extractionText": "without \nevery directly mimicking them", "afterText": ".   \nIt\u2019s easy to let the world get you down sometimes, especially in a year like this\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\none. It\u2019s easy to think that dreams don\u2019t c", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film&#x27;s homage to musicals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">without directly mimicking</span>}</div>"}, {"index": 29, "class": "audience_impact", "text": "It\u2019s easy to let the world get you down sometimes", "color": "#D2E3FC", "startPos": 4742, "endPos": 4791, "beforeText": "ue. It pays homage to musicals like \n\u201cSingin\u2019 in the Rain\u201d and Jacques Demy\u2019s \u201cThe Umbrellas of Cherbourg\u201d without \nevery directly mimicking them.   \n", "extractionText": "It\u2019s easy to let the world get you down sometimes", "afterText": ", especially in a year like this\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\none. It\u2019s easy to think that dreams don\u2019t come true, and that love only exists in \nmovies. \u201cLa La", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">discouraged, overwhelmed</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The world</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 30, "class": "audience_impact", "text": "It\u2019s easy to think that dreams don\u2019t come true", "color": "#D2E3FC", "startPos": 4849, "endPos": 4895, "beforeText": "without \nevery directly mimicking them.   \nIt\u2019s easy to let the world get you down sometimes, especially in a year like this\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\none. ", "extractionText": "It\u2019s easy to think that dreams don\u2019t come true", "afterText": ", and that love only exists in \nmovies. \u201cLa La Land\u201d serves to remind us that movies can still be magical, and \nthey can still provide the channel for", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">pessimistic, disheartened</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Life circumstances</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 31, "class": "audience_impact", "text": "\u201cLa La Land\u201d serves to remind us that movies can still be magical", "color": "#D2E3FC", "startPos": 4935, "endPos": 5000, "beforeText": "etimes, especially in a year like this\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\none. It\u2019s easy to think that dreams don\u2019t come true, and that love only exists in \nmovies. ", "extractionText": "\u201cLa La Land\u201d serves to remind us that movies can still be magical", "afterText": ", and \nthey can still provide the channel for us to see magic in the world around us. It\u2019s \nnot so much another day in the sun, as the characters sing", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">hopeful, inspired</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film &#x27;La La Land&#x27;</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 32, "class": "audience_impact", "text": "they can still provide the channel for us to see magic in the world around us", "color": "#D2E3FC", "startPos": 5007, "endPos": 5084, "beforeText": "y to think that dreams don\u2019t come true, and that love only exists in \nmovies. \u201cLa La Land\u201d serves to remind us that movies can still be magical, and \n", "extractionText": "they can still provide the channel for us to see magic in the world around us", "afterText": ". It\u2019s \nnot so much another day in the sun, as the characters sing in that opening \nnumber, but the dreams of the night before, the ones we wake up an", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">optimistic, wonder</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film &#x27;La La Land&#x27;</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 33, "class": "audience_impact", "text": "the dreams of the night before, the ones we wake up and try to fulfill, that keep us dancing", "color": "#D2E3FC", "startPos": 5180, "endPos": 5273, "beforeText": "the channel for us to see magic in the world around us. It\u2019s \nnot so much another day in the sun, as the characters sing in that opening \nnumber, but ", "extractionText": "the dreams of the night before, the ones we wake up and try to fulfill, \nthat keep us dancing", "afterText": ". \nThis review was originally published on September 14, 2016 as a part of our TIFF \ncoverage.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">motivated, driven</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film&#x27;s themes of dreams and fulfillment</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
